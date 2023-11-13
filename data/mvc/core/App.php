@@ -1,4 +1,6 @@
 <?php
+namespace Core;
+
 /*
     http://mvc.local/user/index
     http://mvc.local/index.php?url=user/index
@@ -43,8 +45,8 @@ class App
         }
 
         // Crear instancia del controlador y llamar al metodo
-
-        $controllerObject = new $controllerName;
+        $controllerName = "\App\Controllers\\" . $controllerName;
+        $controllerObject = new $controllerName; // new \App\Controllers\UserController
 
         //Verifico si el metodo existe en la peticion de la clase/Controlador
         if(method_exists($controllerObject,$method)){

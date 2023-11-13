@@ -26,7 +26,7 @@ Galaxiaenana\galaxia::muerte();
 
 
 echo "<h2>Acceso Totalmente cualificado</h2>"; // acceso absoluto desde la raiz
-\Dwes\Galaxiaenana\observar("NGC 5709");
+Galaxiaenana\observar("NGC 5709");
 
 echo "<br>El radio es: " . \Dwes\Galaxiaenana\RADIO;
 $gl = new \Dwes\Galaxiaenana\galaxia();

@@ -1,4 +1,4 @@
 <?php
     require "core/App.php";
 
-    $app = new App(); // crea el enrutador
+    $app = new Core\App(); // crea el enrutador

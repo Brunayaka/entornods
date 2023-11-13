@@ -1,4 +1,5 @@
 <?php
+namespace App\Controllers;
 
 class UserController{
     function __construct()
@@ -7,7 +8,7 @@ class UserController{
     }
 
     function index(){
-        echo "<br>En el INDEX de USER";
+        require('../views/user/index.php');
     }
 
     function show(){
