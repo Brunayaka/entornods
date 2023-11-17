@@ -6,10 +6,12 @@
 
 
     // Para probar todo:
-    // require "app/models/User.php";
-    // use App\Models\User;
-    // $user = new User();
+    // require "app/controllers/UserController.php";
 
+    // use App\Controllers\UserController;
+
+    // $user = new UserController();
+    // $user->index();
     // $user->insert();
 
     // // Para probar se hace esto:
