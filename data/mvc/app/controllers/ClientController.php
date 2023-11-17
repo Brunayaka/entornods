@@ -8,7 +8,7 @@ class ClientController{
         echo "<br>Construyendo el CLIENT CONTROLLER";
     }
     function index(){
-        echo "<br>Mostrando el INDEX de CLIENT CONTROLLER";
+        require('../views/client/index.php');
     }
     function show(){
         echo "<br>Mostrando el SHOW de CLIENT CONTROLLER";
