@@ -24,7 +24,6 @@
   <!-- Begin page content -->
   <main role="main" class="container">
     <h1>Lista de usuarios</h1>
-
     <table class="table table-striped table-hover">
       <tr>
         <th>Nombre</th>
