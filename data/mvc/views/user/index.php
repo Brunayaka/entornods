@@ -35,9 +35,9 @@
       <?php foreach ($users as $key => $user) { ?>
         <tr>
           <td><?php echo $user->name ?></td>
-          <td><?php echo $user->surname ?></td>+
+          <td><?php echo $user->surname ?></td>
           <td><?php echo $user->email ?></td>
-          <td><?php echo $user->birthdate ?></td>
+          <td><?php echo $user->birthdate?></td>
           <td>
             <a href="/user/show/<?php echo $user->id ?>" class="btn btn-primary">Ver </a>
           </td>
