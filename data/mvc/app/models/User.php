@@ -52,13 +52,24 @@ class User extends Model{
         return $stmt->execute();
     }
 
-    public static function save(){
-        echo "<br> Actualizando un registro..";
+    public function save()
+    {
+        $db = User::db();
+        $stmt = $db->prepare('UPDATE users SET name = :name, surname = :surname, birthdate = :birthdate, email = :email WHERE id = :id');
+        $stmt->bindValue(':id', $this->id);
+        $stmt->bindValue(':name', $this->name);
+        $stmt->bindValue(':surname', $this->surname);
+        $stmt->bindValue(':birthdate', $this->birthdate);
+        $stmt->bindValue(':email', $this->email);
+        return $stmt->execute();
     }
 
 
-    public static function delete(){
-        echo "<br> Elimino un registro..";
+    public function delete(){
+        $db = User::db();
+        $stmt = $db->prepare('DELETE FROM users WHERE id = :id');
+        $stmt->bindValue(':id', $this->id);
+        return $stmt->execute();
     }
 
 } // finclass

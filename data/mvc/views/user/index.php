@@ -31,6 +31,8 @@
         <th>Email</th>
         <th>F. nacimiento</th>
         <th></th>
+        <th></th>
+        <th></th>
       </tr>
       <?php foreach ($users as $key => $user) { ?>
         <tr>
@@ -40,6 +42,12 @@
           <td><?php echo $user->birthdate?></td>
           <td>
             <a href="/user/show/<?php echo $user->id ?>" class="btn btn-primary">Ver </a>
+          </td>
+          <td>
+            <a href="/user/edit/<?php echo $user->id ?>" class="btn btn-primary">Editar </a>
+          </td>
+          <td>
+            <a href="/user/delete/<?php echo $user->id ?>" class="btn btn-primary">Borrar </a>
           </td>
         </tr>
       <?php } ?>

@@ -36,4 +36,30 @@ class UserController{
         $user->insert(); // Llamo al modelo
         header('Location:/user');
     }
+
+    public function edit($arguments)
+    {
+        $id = (int) $arguments[0];
+        $user = User::find($id);
+        require '../views/user/edit.php';
+    }
+
+    public function update()
+    {
+        $id = $_REQUEST['id'];
+        $user = User::find($id);
+        $user->name = $_REQUEST['name'];
+        $user->surname = $_REQUEST['surname'];
+        $user->birthdate = $_REQUEST['birthdate'];
+        $user->email = $_REQUEST['email'];
+        $user->save();
+        header('Location:/user');
+    }
+    public function delete($arguments){
+        $id = (int) $arguments[0];
+        $user = User::find($id);
+        $user->delete();
+        header('Location:/user');
+
+    }
 }// Fin clase
